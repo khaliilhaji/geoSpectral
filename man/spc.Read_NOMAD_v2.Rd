@@ -4,7 +4,7 @@
 \alias{spc.Read_NOMAD_v2}
 \title{Read the NOMAD v2 bio-optical database}
 \usage{
-spc.Read_NOMAD_v2(skip.all.na.rows = TRUE)
+spc.Read_NOMAD_v2(skip.all.na.rows = TRUE, fnm)
 }
 \arguments{
 \item{infile}{\code{character} containing the name of the input file.}

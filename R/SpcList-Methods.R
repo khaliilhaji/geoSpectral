@@ -520,10 +520,14 @@ setMethod("spc.getheader", signature = "list", def = function (object,name){
 #' @param ... arguments to be passed to or from other methods
 #' @examples 
 #' sp=spc.example_spectra()
-#' BL=spc.data2header(sp,"CAST")
+#' BL=spc.makeSpcList(sp,"CAST")
 #' a=new("SpcHeader") # create new SpcHeader class
-#' a$Longitude=123 
-#' spc.setheader(BL[[1]],"Station") <- a
+#' h = lapply(BL, spc.getheader)
+#' h[[1]]$Longitude=123
+#' h[[1]]$Latitude=23
+#' h[[2]]$Longitude=-67
+#' h[[2]]$Latitude=35
+#' spc.setheader(BL) <- h
 #' BL[[1]]@header
 setReplaceMethod(f="spc.setheader", signature="list",
 		definition=function(object,value,...){
@@ -532,9 +536,8 @@ setReplaceMethod(f="spc.setheader", signature="list",
 			if(length(value)==1)
 				value = rep(value,length(object))
 			stopifnot(length(value)==length(object))			
-			
-			a=sapply(1:length(object), function(x) {
-						object[[x]] = spc.setheader(object[[x]],value[x])
+			object <- spc.lapply(1:length(object), function(x) {
+						spc.setheader(object[[x]]) <- value[[x]]
 					})
 			validObject(object)
 			return(object)
@@ -667,6 +670,7 @@ setGeneric (name= "spc.lapply",
 setMethod("spc.lapply", signature="SpcList", definition= function (X, FUN, ...) {
 			by = X@by
 			by_names <- names(X)
+			browser()
 			X = lapply(as(X,"list"),FUN,...)
 			if (all(sapply(X, class)=="Spectra")) {
 			  X = as(X, "SpcList")

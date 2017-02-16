@@ -2488,7 +2488,7 @@ spc.example_spectra = function(){
 #' a = spc.Read_NOMAD_v2(fnm)
 #'
 #' spc.plot.plotly(ap, plot.max=15)
-spc.Read_NOMAD_v2 = function(skip.all.na.rows=TRUE) {
+spc.Read_NOMAD_v2 = function(skip.all.na.rows=TRUE, fnm) {
   fnm = file.path(system.file(package = "geoSpectral"), "test_data","nomad_seabass_v2.a_2008200.txt.gz")
   #Read data off disk
   print(paste("Reading the NOMAD file", fnm, "off disk."))
@@ -2540,7 +2540,12 @@ spc.Read_NOMAD_v2 = function(skip.all.na.rows=TRUE) {
     return (out)
   })
   names(out) = ShortNames
-  out
+  sapply(1:length(ShortNames), function(x){
+    headers <- spc.getheader(out[[x]])
+    headers$ParameterName <- ShortNames[x]
+    spc.setheader(out[[x]],)
+  })
+  SpcList(out)
 }
 
 #'sp = spc.example_spectra()
