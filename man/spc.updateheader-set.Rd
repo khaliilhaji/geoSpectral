@@ -4,9 +4,11 @@
 \alias{spc.updateheader<-}
 \title{Update a field of the @header slot of a \code{Spectra} object}
 \usage{
-spc.updateheader(x,name)<-value
+spc.updateheader(x,name,...)<-value
 }
 \arguments{
+\item{...}{arguments to be passed to or from other methods}
+
 \item{x}{A \code{Spectra} objec}
 
 \item{name}{of the header field to be updated}
@@ -20,4 +22,3 @@ sp@header
 spc.updateheader(sp,"Station")<-11
 sp@header
 }
-

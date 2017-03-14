@@ -4,14 +4,15 @@
 \alias{spc.data2header}
 \title{Populate fields of header slot using data from data slot}
 \usage{
-spc.data2header(object,dataname,headerfield,compress)
+spc.data2header(object,dataname,headerfield,compress,...)
 }
 \arguments{
 \item{object}{\code{Spectra} object}
 
 \item{dataname}{A character object specifying the name of @data column to be used}
 
-\item{headerfield}{A character object specifying the name of the @header field to be changed}
+\item{headerfield}{A character object specifying the name of the @header field to be changed
+@param ... arguments to be passed to or from other methods}
 
 \item{compress}{true or false}
 }
@@ -23,9 +24,9 @@ Populates a field of @header with a column data from @data slot.
 }
 \details{
 This function extracts data from a column of the @data slot (specified by dataname)  
-and creates a new @header field with it. If headerfield is not provided, the name 
+and creates a new @header field with it. Ifa header field is not provided, the name 
 of the new header field will be the same as dataname. 
-The name of the new header field can be overwritten by providing headerfield.
+The name of the new header field can be overwritten by providing header field.
 If all the incoming data rows (dataname) are the same, information put into the header 
 can be compressed by selecting compress=TRUE (default is FALSE). This would take only the first element 
 from the @data column.
@@ -37,7 +38,6 @@ sp@header
 sp=spc.data2header(sp,"CAST","ProjectCast")
 sp@header
 sp$CAST=rep(33, nrow(sp))
-sp=spc.data2header(sp,"CAST","ProjectCast", compress=T)
+sp=spc.data2header(sp,"CAST","ProjectCast", compress=TRUE)
 sp@header
 }
-
