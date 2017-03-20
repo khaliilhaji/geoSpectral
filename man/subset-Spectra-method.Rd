@@ -5,12 +5,16 @@
 \alias{subset,Spectra-method}
 \title{Subsetting for a \code{Spectra} and spcList classes}
 \usage{
-subset(x,y,select)
+\S4method{subset}{Spectra}(x, subset, select, drop = FALSE, ...)
 }
 \arguments{
 \item{x}{A \code{Spectra} object}
 
 \item{select}{Condition selected}
+
+\item{drop}{passed on to [ indexing operator. Default is FALSE}
+
+\item{...}{arguments to be passed to or from other methods.}
 
 \item{y}{Subset}
 }
@@ -20,7 +24,7 @@ It is possible to perform a row-wise selection
 }
 \examples{
 fnm = file.path(system.file(package = "geoSpectral"), "test_data","particulate_absorption.csv.gz")
-abs = read.table(fnm,sep=",",header=T)
+abs = read.table(fnm,sep=",",header=TRUE)
 abs$STATION=factor(abs$STATION)
 abs[1:2,1:17] #Display only the first 2 rows and first 17 columns if the data frame
 lbd = as.numeric(gsub("X","",colnames(abs)[14:514]))
@@ -49,6 +53,4 @@ subset(myS,DEPTH<=30) #Subsetting rows with respect to the value of Ancillary da
 subset(myS,anap_440<=0.01) #Subsetting rows with respect to the value of Spectral data
 subset(myS,subset=DEPTH<=30,select="CAST") #Selecting Ancillary data columns, leaving Spectral columns intact
 
-
 }
-
