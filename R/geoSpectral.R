@@ -22,11 +22,14 @@
 #' @references
 #' There is a tutorial for \pkg{geoSpectral} at the package's GitHub page: \url{https://github.com/PranaGeo/geoSpectral/wiki/RPackage_geoSpectral_Tutorial}.
 #'
-#'@concept Spectral Wavelength
-#'@seealso See also the packages \pkg{spacetime}, \pkg{rgdal},
+#' @concept Spectral Wavelength
+#' @seealso See also the packages \pkg{spacetime}, \pkg{rgdal},
 #'\pkg{sp}, \pkg{xts}
 
 #' @docType package
 #' @name geoSpectral
-#' @import dplyr maps methods rgdal spacetime xts
+#' @import maps methods rgdal spacetime xts
+#' @importFrom dplyr select everything
+#' @importFrom rbokeh figure ly_map ly_points
+#' @importFrom plotly plot_ly add_trace layout toRGB subplot
 NULL
