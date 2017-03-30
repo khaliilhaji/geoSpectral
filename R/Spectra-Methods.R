@@ -152,17 +152,17 @@ Spectra = function(inDF,Spectra,Wavelengths,Units,space,time,endTime,header,...)
 
 #' @title Conversion between \code{Spectra} and data.frame objects
 #'
-#' @description Convert a \code{Spectra} object into a data.frame.
-#' 
-#' Converting a data.frame object to \code{Spectra} requires a set of attributes
-#'  to be present in the source data.frame object.
-#' While these attributes are generally created during the conversion of a
+#' @description Converting \code{Spectra} object to data.frame is straightforward 
+#' while the conversion in the opposite direction requires a set of attributes
+#' to be present in the source data.frame object.
+#' These attributes are generally created during the conversion of a
 #' \code{Spectra} object into data.frame, they can 
 #' also be manually set if they are non-existant (see the example below).
 #' @param from The input object
 #' @param to Name of the class of output object
 #' @aliases as,Spectra
 #' @rdname Spectra-coerce
+#' @name Spectra-coerce
 #' @examples 
 #' #Convert a Spectra object to data.frame
 #' sp <- spc.example_spectra()
@@ -205,6 +205,7 @@ setAs(from="Spectra", to="data.frame", def=function(from){
 })
 
 #' @rdname Spectra-coerce
+#' @name Spectra-coerce
 setAs(from="data.frame", to="Spectra", def=function(from){
   #This function makes use of geoSpectral::Spectra()
   if(!any(grepl("Wavelengths", names(attributes(from))))) 
@@ -565,13 +566,13 @@ setMethod("spc.plot", "Spectra", function (x, Y, maxSp, lab_cex,xlab,ylab,type="
     idx = seq(1,nrow(x),length.out=maxSp	)
   else
     idx = 1:nrow(x)
-  
+
   Xidx = rep(FALSE, nrow(x@Spectra))
   Xidx[idx] = TRUE
   
-  if(any(x@InvalidIdx)){
-    Xidx[x@InvalidIdx]=FALSE
-  }
+  #if(any(x@InvalidIdx)){
+  #  Xidx[x@InvalidIdx]=FALSE
+  #}
   #			if(any(x@SelectedIdx)){
   #				mycol = rep("gray", nrow(x@Spectra))
   #				mycol[x@SelectedIdx]="red"
@@ -2317,25 +2318,25 @@ setMethod("spc.plot.time", signature="Spectra", function (object,Y,maxSp=50,xdat
   
   if (length(object@InvalidIdx)==0)
     object@InvalidIdx = rep(FALSE,nrow(object@data))		
-  
+
   if(missing(Y)){
     Y = spc.colnames(object)
   }
   if(ncol(object)>maxSp)
     Y = Y[seq(1,ncol(object),length.out=maxSp)]
   
-  Y = object[[Y]][!object@InvalidIdx,]
+  tsdata = object[[Y]] #[!object@InvalidIdx,]
   
   if(missing(lab_cex))
     lab_cex = 1
   
-  tsCol = rainbow(ncol(Y))
+  tsCol = rainbow(ncol(tsdata))
   
   if(xdata=="time") {
     x = time(object)
     x = x[!object@InvalidIdx]
     xlb = "Time"
-    XX = xts::xts(Y,time(object@time))
+    XX = xts::xts(tsdata,time(object@time))
     plot.new()
     #xts::plot.xts(XX,screens=1) #,xlab="",ylab="",lwd=lwd,col=tsCol, ...)
     #xtsExtra::plot.xts(XX,screens=1, xlab="",ylab="",lwd=lwd,col=tsCol, ...)#Problem: does not plot inside the function
@@ -2345,21 +2346,16 @@ setMethod("spc.plot.time", signature="Spectra", function (object,Y,maxSp=50,xdat
     x = 1:nrow(object)
     xlb = "Observation number"
     x = x[!object@InvalidIdx]
-    matplot(x,Y, type="l", pch=19,cex=0.3,xlab="",ylab="",lwd=lwd,col=tsCol,...)        
+    matplot(x,tsdata, type="l", pch=19,cex=0.3,xlab="",ylab="",lwd=lwd,col=tsCol,...)        
   }
-  
   
   # 			df$Date <- as.Date( df$Date, '%m/%d/%Y')
   # 			require(ggplot2)
   # 			ggplot( data = df, aes( Date, Visits )) + geom_line() 
   
-  
   grid(col="black")
   
   #Draw the legend
-  if(class(Y)=="numeric")
-    Y = names(object)[Y]
-  
   if(length(Y)>1&length(Y)<=10) {
     legend("bottomright",Y,col=1:length(Y),fill=1:length(Y),bty="n",cex=lab_cex)
     ylb = bquote(.(object@LongName[1])*", ["*.(object@Units[1])*"]")	
@@ -2442,7 +2438,8 @@ setMethod("spc.plot.depth", signature="Spectra", function (object,X,maxSp=10,lab
     }
   }
   if(missing(ylim)){
-    ylim = rev(range(pretty(depth[!object@InvalidIdx],n=10)))
+    #ylim = rev(range(pretty(depth[!object@InvalidIdx],n=10)))
+    ylim = rev(range(pretty(depth,n=10)))
     ylim[2]=-0.1	
   }
   #If any, do not draw these parameters
