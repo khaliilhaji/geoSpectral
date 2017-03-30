@@ -14,9 +14,9 @@ spc.interp.spectral(source1,target_lbd,show.plot, ...)
 \arguments{
 \item{source1}{A \code{Spectra} object}
 
-\item{target_lbd}{numeric vector giving desired wavelengths}
+\item{target_lbd}{numeric vector containing desired wavelengths}
 
-\item{show.plot}{logical TRUE if a graphical representation is required}
+\item{show.plot}{logical, TRUE if a graphical representation is required}
 
 \item{...}{further arguments to pass on to approx().}
 }

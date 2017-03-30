@@ -20,9 +20,7 @@ spc.invalid.detect(source1)
 logical. TRUE for invalid rows
 }
 \description{
-Determine invalid rows (records) of a \code{Spectra} \code{SpcList} object
-
-Determine invalid records inside a \code{SpcList} object
+Determine invalid rows (records) of a \code{Spectra} or \code{SpcList} object
 }
 \examples{
 sp=spc.example_spectra()

@@ -19,13 +19,13 @@ spc.plot.depth(object, ...)
 
 \item{X}{character. Column names of the a \code{Spectra} object to be plotted.}
 
-\item{maxSp}{numeric. Maximum number of \code{Spectra} to plot.}
+\item{maxSp}{numeric. Maximum amount of \code{Spectra} data to plot.}
 
 \item{lab_cex}{vector of character expansion sizes, used cyclically.}
 
 \item{title}{a chracter string, title for plot}
 
-\item{add}{logical. If TRUE, plots are added to current one,}
+\item{add}{logical. If TRUE, plots are added to current plot,}
 
 \item{xlab, ylab}{titles for x and y axes, as in plot.}
 
@@ -34,7 +34,7 @@ spc.plot.depth(object, ...)
 \item{lwd}{numeric vector of line widths}
 }
 \description{
-Generating plot of the contents of a \code{Spectra} object with respect to depth
+Generate plot of the contents of a \code{Spectra} object by depth
 }
 \examples{
 x <- spc.example_spectra()

@@ -15,7 +15,7 @@ spc.plot.depth.plotly(sp, column, plot.max = 10, showlegend = FALSE,
 \arguments{
 \item{sp}{A \code{Spectra} object}
 
-\item{column}{Number or name , default  value is 10 if a number or name has not been entered}
+\item{column}{Number or name , default  value is 10 if a numeric or name has not been provided}
 
 \item{plot.max}{numeric value for a maximum number of data in plot}
 
@@ -26,7 +26,7 @@ spc.plot.depth.plotly(sp, column, plot.max = 10, showlegend = FALSE,
 \item{title}{a chracter string, title for plot}
 }
 \description{
-Plot a \code{Spectra} object with respect to depth
+Plot a \code{Spectra} object by depth
 }
 \examples{
 sp = spc.example_spectra()

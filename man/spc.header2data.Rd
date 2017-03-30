@@ -24,7 +24,7 @@ spc.header2data(object, headerfield, dataname, compress, ...)
 
 \item{headerfield}{character. Field name of the header to be copied.}
 
-\item{dataname}{character. Column name of @data slot to copy the incoming data.}
+\item{dataname}{character. Column name of destination @data slot.}
 
 \item{compress}{logical. Whether or not to compress data put into the header. 
 See help of \code{\link{spc.data2header}}.}
@@ -35,7 +35,7 @@ See help of \code{\link{spc.data2header}}.}
 object of class \code{Spectra} or \code{SpcList}
 }
 \description{
-Get the header metadata and place it inside the @data slot
+Extract metadata from the header and replicate it in the @data slot
 }
 \details{
 If header element has length >1, its type is checked. If it is "character",

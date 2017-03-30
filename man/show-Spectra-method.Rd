@@ -11,7 +11,7 @@
 \item{object}{a \code{Spectra} object}
 }
 \value{
-show returns an invisible \code{NULL}
+\code{show} returns an invisible \code{NULL}
 }
 \description{
 Display a \code{Spectra} object

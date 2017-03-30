@@ -13,15 +13,14 @@ spc.cname.construct(object, value)
 \arguments{
 \item{object}{A variable of class \code{Spectra}}
 
-\item{value}{A character object}
+\item{value}{A \code{character}}
 }
 \value{
-vector of characters
+vector composed of characters
 }
 \description{
-Function for a \code{Spectra} object that generates column names made of a 
-combination of @shortName and @Wavelenght slots. If \code{value} is 
-omitted, the @ShortName slot is used.
+Generates column names taken from the @shortName and @Wavelenght slots of a \code{spectra} object. If \code{value} is 
+omitted, the @ShortName slot is used by default.
 }
 \examples{
 sp <- spc.example_spectra()

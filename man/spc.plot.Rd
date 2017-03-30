@@ -12,11 +12,11 @@ spc.plot(x, Y, maxSp, lab_cex,xlab,ylab,type,pch,lwd,cex,...)
   pch = 19, lwd = 2, cex = 0.3, ...)
 }
 \arguments{
-\item{x}{and Y     a \code{Spectra} data}
+\item{x}{a \code{Spectra} object}
 
-\item{Y}{fskjldsk}
+\item{Y}{a \code{Spectra} object}
 
-\item{maxSp}{maximum number of \code{Spectra} to plot}
+\item{maxSp}{maximum amount of \code{Spectra} data to plot}
 
 \item{lab_cex}{vector of character expansion sizes, used cyclically}
 
@@ -24,7 +24,7 @@ spc.plot(x, Y, maxSp, lab_cex,xlab,ylab,type,pch,lwd,cex,...)
 
 \item{ylab}{title for y axis, as in plot().}
 
-\item{type}{character string (length 1 vector) or vector of 1-character strings indicating 
+\item{type}{character string (length 1 vector) or vector of character strings indicating 
 the type of plot for each column of y. See help of matplot() or plot().}
 
 \item{pch}{character string or vector of 1-characters or integers for plotting characters.
@@ -38,7 +38,7 @@ be magnified relative to the default. See help of \code{\link{par}}.}
 \item{...}{any further arguments to be passed to matplot}
 }
 \description{
-Generating plot of the intensity of a measurement inside a \code{Spectra} object with respect to the wavelength.
+Generate a plot displaying the intensity of wavelengths of a \code{Spectra} object.
 }
 \examples{
 x <- spc.example_spectra()

@@ -13,10 +13,10 @@ spc.setwavelengths(object) <- value
 \arguments{
 \item{object}{A \code{Spectra} object}
 
-\item{value}{Numeric}
+\item{value}{a \code{numeric}}
 }
 \description{
-Function  to change or set wavelengths  inside  of  a \code{Spectra} object
+Change or set wavelengths of a \code{Spectra} object
 }
 \examples{
  x <- spc.example_spectra()

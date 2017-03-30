@@ -4,7 +4,7 @@
 \name{spc.lines}
 \alias{spc.lines}
 \alias{spc.lines,Spectra-method}
-\title{Add spectra to an existing plot}
+\title{Add a \code{spectra} object to an existing plot}
 \usage{
 spc.lines(x,...)
 
@@ -16,7 +16,7 @@ spc.lines(x,...)
 \item{...}{Additional input arguments to be passed to lines()}
 }
 \description{
-Adds spectra to an existing plot created by spc.plot() using lines()
+Adds a \code{spectra} to an existing plot created by spc.plot() using lines()
 }
 \examples{
 sp = spc.example_spectra()

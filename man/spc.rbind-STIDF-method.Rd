@@ -11,7 +11,7 @@
 \item{...}{\code{STIDF} object}
 }
 \description{
-Take a \code{STIDF} objects and combine by rows
+Take \code{STIDF} objects and combine by rows
 }
 \examples{
 x <- spc.example_spectra()

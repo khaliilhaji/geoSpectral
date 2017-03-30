@@ -27,7 +27,7 @@ spc.plot.time(object, ...)
 \item{lwd}{vector of line widths}
 }
 \description{
-Generating plot of the contents of a \code{Spectra} object with respect to time.
+Generate plot of the contents of a \code{Spectra} object by time.
 If xdata is 'time', data is plotted with respect to the 'TIME' column. If xdata 
 is 'observations', data is plotted with respect to an integer index equal to 1:nrow(object).
 }

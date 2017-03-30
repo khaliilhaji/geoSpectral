@@ -3,7 +3,7 @@
 # Method : SpcHeaderAdd	
 #########################################################################
 #'  Set a field of the @header slot of a \code{SpcHeader} class object
-#' @description Function add the value of a field in the header slot of \code{SpcHeader} class object
+#' @description Add the value of a field in the header slot of \code{SpcHeader} class object
 #'
 #' @usage 
 #' SpcHeaderAdd (object,Name,Value,...)

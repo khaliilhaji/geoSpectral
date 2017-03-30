@@ -23,7 +23,7 @@
 object of class \code{SpcList}
 }
 \description{
-Populates a field of @header with a column data from @data slot.
+Populates a field of @header with column data from @data slot.
 }
 \details{
 This function extracts data from a column of the @data slot (specified by dataname)  

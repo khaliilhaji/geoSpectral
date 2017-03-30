@@ -13,13 +13,13 @@ spc.rbind(...)
 \arguments{
 \item{...}{\code{Spectra} object}
 
-\item{compressHeader}{Compress the header (make multiple all-equal header elements as ONE, default value is TRUE}
+\item{compressHeader}{Compress the header (make multiple all-equal header elements ONE, default value is TRUE)}
 }
 \value{
 \code{Spectra} object
 }
 \description{
-Take a \code{Spectra} objects and combine by rows
+Take \code{Spectra} objects and combine them by rows
 }
 \examples{
 x <- spc.example_spectra()

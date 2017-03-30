@@ -17,7 +17,7 @@ spc.getselected.idx(object)
 \code{Spectra} object
 }
 \description{
-Extracts index of rows marked as selected
+Extract index of rows marked as 'selected'
 }
 \examples{
 x <- spc.example_spectra()

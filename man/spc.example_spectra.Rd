@@ -7,7 +7,7 @@
 spc.example_spectra()
 }
 \description{
-Example of Spectral object is created by the function
+Create an example \code{spectra} object.
 }
 \examples{
 sp = spc.example_spectra()

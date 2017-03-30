@@ -12,9 +12,9 @@
 }
 \description{
 Converting \code{Spectra} object to data.frame is straightforward 
-while the conversion in the opposite direction requires a set of attributes
+while conversion in the opposite direction requires a set of attributes
 to be present in the source data.frame object.
-These attributes are generally created during the conversion of a
+While these attributes are generally created during the conversion of a
 \code{Spectra} object into data.frame, they can 
 also be manually set if they are non-existant (see the example below).
 }

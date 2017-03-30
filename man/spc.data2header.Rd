@@ -19,7 +19,7 @@ spc.data2header(object,dataname,headerfield,compress,...)
 \item{headerfield}{A character object specifying the name of the @header field to be changed}
 
 \item{compress}{logical. Whether or not to compress data put into the header. 
-See the description section.}
+See details.}
 
 \item{...}{arguments to be passed to or from other methods}
 }
@@ -27,14 +27,14 @@ See the description section.}
 object of class \code{Spectra}
 }
 \description{
-Populates a field of @header with a column data from @data slot.
+Populates a @header field with  column data from @data slot.
 }
 \details{
 This function extracts data from a column of the @data slot (specified by dataname)  
-and creates a new @header field with it. Ifa header field is not provided, the name 
+and creates a new @header field with it. If a header field is not provided, the name 
 of the new header field will be the same as dataname. 
 
-The name of the new header field can be overwritten by providing header field.
+The name of the new header field can be overwritten by providing a header field.
 If all the incoming data rows (dataname) are the same, information put into the header 
 can be compressed by selecting compress=TRUE (default is FALSE). This would take only 
 the first element from the @data column.

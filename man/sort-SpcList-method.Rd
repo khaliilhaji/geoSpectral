@@ -12,10 +12,10 @@
 \item{x}{A \code{SpcList} object}
 
 \item{decreasing}{Logical. If TRUE, then the rows are sorted in decreasing order. Passed on to the
-sort.idx() function from the base package. Default is FALSE.}
+sort.idx() function from the base package. Default value is FALSE.}
 
 \item{na.last}{for controlling the treatment of NAs. Passed on to the
-sort.idx() function from the base package. Default is NA.}
+sort.idx() function from the base package. Default value is NA.}
 
 \item{which.col}{A character, defining the name of the column to be used in the sorting}
 

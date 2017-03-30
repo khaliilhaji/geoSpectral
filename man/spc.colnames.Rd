@@ -27,8 +27,6 @@ as a character vector. spc.colnames()<- returns a \code{Spectra} object.
 }
 \description{
 Set or retrieve column names of a \code{Spectra} object
-
-Set column names of a \code{Spectra} object
 }
 \examples{
 x <- spc.example_spectra()

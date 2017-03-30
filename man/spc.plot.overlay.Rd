@@ -16,8 +16,8 @@ spc.plot.overlay(object,lab_cex,leg_idx, type, lty,lwd, col, ...)
 
 \item{lab_cex}{vector of character expansion sizes, used cyclically}
 
-\item{leg_idx}{logical If it is of length 1, it determines whether or not to display the legend.
-If length(leg_idx) is bigger than 1, then its lengths has to equal length(object). Default is TRUE.}
+\item{leg_idx}{logical, If it is of length 1, it determines whether or not to display the legend.
+If length(leg_idx)>1, then its lengths must be equal to length(object). Default value is TRUE.}
 
 \item{type}{character string (length 1 vector) or vector of 1-character strings indicating the type of plot for each column of y,}
 

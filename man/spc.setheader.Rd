@@ -16,7 +16,7 @@ spc.setheader(object) <- value
 \item{value}{Object of class SpcHeader}
 }
 \description{
-Function sets or changes the value of a field in the header slot of \code{Spectra} object
+Set or change the value of a field in the header slot of \code{Spectra} object
 }
 \examples{
 sp=spc.example_spectra()

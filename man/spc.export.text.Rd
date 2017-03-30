@@ -33,7 +33,7 @@ spc.import.text(filename, sep = ";", ...)
 \item{...}{arguments to be passed to or from other methods}
 }
 \description{
-Save the \code{Spectra} and \code{SpcHeader} objects on disk in text format and read back in.
+Save/read \code{Spectra} and \code{SpcHeader} objects to/from disk in text format.
 }
 \examples{
 x=spc.example_spectra()

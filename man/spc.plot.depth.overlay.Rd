@@ -20,7 +20,7 @@ spc.plot.depth.overlay(object, X, lab_cex, ...)
 \item{...}{any further arguments of plot}
 }
 \description{
-Generating plot of the contents of a \code{SpcList} object overlay with respect to depth
+Generate plot of the contents of a \code{SpcList} object overlay by depth
 }
 \examples{
 sp <- spc.example_spectra()

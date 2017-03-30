@@ -10,7 +10,7 @@
 \arguments{
 \item{x}{a \code{Spectra} object}
 
-\item{...}{arguments to be passed to or from other methods}
+\item{...}{additional arguments which can be passed to or from other methods}
 }
 \value{
 Returns a matrix (\code{Spectra} data)

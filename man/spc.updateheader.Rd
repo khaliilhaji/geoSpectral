@@ -23,7 +23,7 @@ spc.updateheader(object,Name,value,...)
 \item{...}{arguments to be passed to or from other methods}
 }
 \description{
-Updates or changes the value of a field in the header slot of \code{Spectra} object
+Update or change the value of a field in the header slot of a \code{Spectra} object
 }
 \examples{
 sp=spc.example_spectra()

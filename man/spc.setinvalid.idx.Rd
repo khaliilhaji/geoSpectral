@@ -16,7 +16,7 @@ spc.setinvalid.idx(object) <- value
 \item{value}{Logical vector}
 }
 \description{
-Stores the row indexes to be stored as invalid.
+Set rows of a \code{spectra} object as invalid.
 }
 \examples{
  

@@ -3,7 +3,7 @@
 \docType{methods}
 \name{ncol,Spectra-method}
 \alias{ncol,Spectra-method}
-\title{The Number of Columns  of a Spectra object}
+\title{The number of columns  of a Spectra object}
 \usage{
 \S4method{ncol}{Spectra}(x)
 }

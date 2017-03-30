@@ -22,10 +22,10 @@ as spectral data.}
 column index in inDF where the spatial coordinates are (if length(space)==2) or where the ID of 
 the spatial location is (if (length(space)==1). If \code{space} is not provided, inDF columns are
 searched to match one of the following : LAT,lat,latitude,LATITUDE,LON,LONG,lon,long,longitude,LONGITUDE
-If LAT & LON are not found, they set the dummy value of 1.}
+If LAT & LON are not found, they are set to the default value of 1.}
 
 \item{time}{\code{character} or \code{integer} indicating the column in inDF containing POSIXct TIME
-data values. if \code{time} is missing, it is set the dummy integer sequential vector of {1:nrow(Spectra)}.}
+data values. If \code{time} is missing, it is set to the default integer sequential vector of {1:nrow(Spectra)}.}
 
 \item{endTime}{\code{character} or \code{integer} indicating the column in inDF containing POSIXct
 ENDTIME data values. If the temporal measurements are performed over an interval, \code{time} and \code{endtime} 
@@ -45,8 +45,8 @@ Returns an object of class \code{Spectra}.
 \code{Spectra} Creates an instance of class \code{Spectra}.
 }
 \details{
-This constructor function uses The function \code{Spectra()} calls \code{spacetime::stConstruct()}
-that is the constructor  of the \code{STIDF} class using an input \code{data.frame} object of long-table format.
+This constructor function uses the function \code{Spectra()} and calls \code{spacetime::stConstruct()}
+which is the constructor of the \code{STIDF} class using a \code{data.frame} object of long-table format as input .
 
 \code{length{@Wavelengths}==ncol(@Spectra)}. The default @WavelengthsUnit is nm^{-1}.
 }

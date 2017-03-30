@@ -11,7 +11,7 @@ SpcList(x)
 }
 \description{
 With this function, it is easy to create a \code{SpcList} object
-given an list containing multipls \code{Spectra} objects.
+given a list containing multiple \code{Spectra} objects.
 }
 \examples{
 sp=spc.example_spectra()

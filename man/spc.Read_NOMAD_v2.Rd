@@ -7,7 +7,7 @@
 spc.Read_NOMAD_v2(skip.all.na.rows = TRUE)
 }
 \arguments{
-\item{skip.all.na.rows}{\code{logical} whether or not eliminate records where all 
+\item{skip.all.na.rows}{\code{logical} whether or not to eliminate records where all 
 channels are NAs}
 }
 \value{

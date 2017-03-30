@@ -20,7 +20,7 @@ missing values are taken as false.}
 \item{...}{arguments to be passed to or from other methods.}
 }
 \description{
-Subsetting can be achieved using the implementation of the R function subset() for \code{Spectra} and SpcList classes
+Subsetting can be achieved using the implementation of the R function subset() for \code{Spectra} and SpcList classes.
 It is possible to perform a row-wise selection
 }
 \examples{

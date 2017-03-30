@@ -4,7 +4,7 @@
 \name{spc.getwavelengths}
 \alias{spc.getwavelengths}
 \alias{spc.getwavelengths,Spectra-method}
-\title{Extract wave lenghts of a \code{Spectra} object}
+\title{Extract the wavelengths of a \code{Spectra} object}
 \usage{
 spc.getwavelengths(object)
 
@@ -14,10 +14,10 @@ spc.getwavelengths(object)
 \item{object}{A \code{Spectra} object}
 }
 \value{
-numeric vector of  wave lengths
+numeric vector of  wavelengths
 }
 \description{
-Get wave lenghts inside of  a \code{Spectra} object
+Extract wavelengths from a \code{Spectra} object
 }
 \examples{
  x <- spc.example_spectra()

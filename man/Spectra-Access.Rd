@@ -33,11 +33,7 @@
 \item{j}{A character (column name) or a numeric (column index) variable}
 }
 \description{
-Operators acting on \code{Spectra} objects to extract parts
-
-Replace parts of a \code{Spectra} object
-
-Operators acting on \code{Spectra} object and \code{Spectra} lists to extract or replace parts.
+Operators acting on \code{Spectra} objects to extract or replace parts
 }
 \details{
 These operators are generic. You can write methods to handle indexing of specific classes of objects

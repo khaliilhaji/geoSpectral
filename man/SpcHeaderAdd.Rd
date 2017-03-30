@@ -20,7 +20,7 @@ SpcHeaderAdd (object,Name,Value,...)
 \item{...}{arguments to be passed to or from other methods}
 }
 \description{
-Function add the value of a field in the header slot of \code{SpcHeader} class object
+Add the value of a field in the header slot of \code{SpcHeader} class object
 }
 \examples{
 sp=spc.example_spectra()

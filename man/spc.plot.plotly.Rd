@@ -15,15 +15,15 @@ spc.plot.plotly(sp, plot.max = 10, showlegend = FALSE,
 \arguments{
 \item{sp}{A \code{Spectra} object}
 
-\item{plot.max}{numeric value for a maximum number of data in plot. Default is 10.}
+\item{plot.max}{numeric value for a maximum amount of data in plot. Default is 10.}
 
 \item{showlegend}{logical, to display legend or not, default is FALSE}
 
 \item{legend_field}{character. Gives the name of the column to be used in the legend.}
 
-\item{hoverinfo}{a chracter, info about  \code{Spectra} object to be used  in hover box.}
+\item{hoverinfo}{a character, info about  \code{Spectra} object to be used  in hover box.}
 
-\item{title}{a chracter string, title for plot.}
+\item{title}{a character string, title for plot.}
 }
 \description{
 Plot a \code{Spectra} object with plotly engine

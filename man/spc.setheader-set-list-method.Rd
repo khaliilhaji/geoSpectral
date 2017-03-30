@@ -15,7 +15,7 @@
 \item{...}{arguments to be passed to or from other methods.}
 }
 \description{
-Function sets or changes the value of a field in the header slot of \code{SpcList} object.
+Set or change the value of a field in the header slot of \code{SpcList} object.
 }
 \examples{
 sp=spc.example_spectra()

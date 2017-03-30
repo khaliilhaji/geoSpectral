@@ -20,7 +20,7 @@ See help of \code{\link{rep}}.}
 A \code{Spectra} object
 }
 \description{
-Operators
+Replicate rows of a Spectra object desired number of times
 }
 \details{
 Replicates rows of \code{x}, making \code{times} copies of each row. 

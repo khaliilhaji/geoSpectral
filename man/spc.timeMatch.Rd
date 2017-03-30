@@ -9,23 +9,23 @@ spc.timeMatch(master,searched,returnList,method,limits,report)
 \arguments{
 \item{master}{ordered sequence of variable of class \code{Spectra}}
 
-\item{searched}{A variable of class \code{Spectra}which is searched}
+\item{searched}{A variable of class \code{Spectra} which is searched}
 
-\item{returnList}{Boolean; should a list be returned with all matches (TRUE), or a vector with single matches (FALSE)?}
+\item{returnList}{Boolean; should a list be returned with all matches (TRUE), or a vector with single matches (FALSE)}
 
 \item{method}{Method used in time-based matching. See the details section.}
 
 \item{limits}{the interval limits}
 
-\item{report}{return character string which has information about searching results, default is False}
+\item{report}{return character string which has information about searching results, FALSE by default}
 }
 \description{
 Match two time sequences for a \code{Spectra} object, where each can be intervals or instances.
 }
 \details{
 spc.timeMatch is similar to spacetime::timeMatch(), only adding some more matching methods.
-When method is "over", the same technique used by spacetime::timeMatch() is used. Useful when
-matched timestamps of both master and searched are exactly equal.
+When method is "over", the same technique used by spacetime::timeMatch() is used. It is useful when
+matched timestamps of both master and searched are completely equal.
 When method is "nearest", the nearest measurement will be found, 
 matching only one data for ALL elements of master.
 When method is "within", measurements that are within the interval limits=c(upper,lower) (in seconds) 

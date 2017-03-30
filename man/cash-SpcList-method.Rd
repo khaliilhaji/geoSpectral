@@ -13,7 +13,7 @@
 \item{name}{A character (column name)}
 }
 \description{
-Operators acting on  \code{Spectra} objects  to extract or replace parts
+Operators acting on  \code{SpcList} objects  to extract or replace parts.
 }
 \examples{
   sp<-spc.example_spectra()

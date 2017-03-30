@@ -4,7 +4,7 @@
 \name{spc.plot.time.plotly}
 \alias{spc.plot.time.plotly}
 \alias{spc.plot.time.plotly,Spectra-method}
-\title{Plot a Spectra object data with respect to time}
+\title{Plot a Spectra object data by time}
 \usage{
 spc.plot.time.plotly(sp, column, plot.max = 10, showlegend = FALSE,
   hoverinfo = "name", title = sp@LongName)
@@ -15,7 +15,7 @@ spc.plot.time.plotly(sp, column, plot.max = 10, showlegend = FALSE,
 \arguments{
 \item{sp}{A \code{Spectra} object}
 
-\item{column}{Number or name , defoult value is 10 if a number or name has not been entered}
+\item{column}{Number or name , default value is 10 if a numeric or name has not been provided}
 
 \item{plot.max}{numeric value for a maximum number of data in plot}
 

@@ -17,7 +17,7 @@ spc.bbox2lines(object)
 \S4method{spc.bbox2lines}{Spectra}(object)
 }
 \arguments{
-\item{object}{spectra object t}
+\item{object}{a \code{spectra} object}
 }
 \description{
 Constructs a rectangle of sp::Lines using the bounding box of a \code{Spectra} object.

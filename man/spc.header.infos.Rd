@@ -10,9 +10,9 @@ spc.header.infos(header)
 \item{header}{A \code{Spectra} header}
 }
 \description{
-This internal function takes as input the \code{Spectral} header as a list and 
-converts its elements to numbers (when possible)
-evals its elements in case the text contains some R code
+This internal function takes a \code{Spectral} header as a list for input and 
+converts its elements to numbers (when possible) and
+evaluates its elements in case the text contains some R code.
 }
 \examples{
 sp=spc.example_spectra()

@@ -34,19 +34,19 @@
 #' Plotting \code{SpcList} object in a grid
 #'
 #' @description
-#' Generating plot of the contents of a \code{SpcList} object in a grid
+#' Generate plot of the contents of a \code{SpcList} object in a grid
 #'
 #' @usage 
 #' spc.plot.grid(x,FUN, nnrow, nncol, mar,oma, lab_cex, ...)
 #' @param x	 a \code{SpcList} data 
-#' @param FUN a character string giving the name of the ploting function to be used. 
+#' @param FUN a character string containing the name of the ploting function to be used. 
 #' Can be either of "spc.plot"
 #' @param mar A numeric vector of length 4, which sets the margin sizes in the following order: bottom, left, top, and right. The default is c(4,4.5,1,0.5)
 #' @param ... any further arguments of plot
 #' @param lab_cex vector of character expansion sizes, used cyclically
 #' @param nnrow number of rows for the grid to be produced
 #' @param nncol number of columns for the grid to be produced
-#' @param oma oma the "outer margin area" around a figure or figures. The usage of mar and oma is shown when plotting a single figure,
+#' @param oma the "outer margin area" around a figure or figures. The usage of mar and oma is shown when plotting a single figure,
 #' 
 #' @examples
 #' sp <- spc.example_spectra()
@@ -116,8 +116,8 @@ setMethod("spc.plot.grid", "SpcList", function (x,FUN, nnrow, nncol, mar=c(4,4.5
 #' @param ...  any further arguments to the plotting function matplot() or spc.plot()
 #' @param lty vector of line types. See par().
 #' @param col A specification for the default plotting color. See par().
-#' @param leg_idx logical If it is of length 1, it determines whether or not to display the legend.
-#' If length(leg_idx) is bigger than 1, then its lengths has to equal length(object). Default is TRUE.
+#' @param leg_idx logical, If it is of length 1, it determines whether or not to display the legend.
+#' If length(leg_idx)>1, then its lengths must be equal to length(object). Default value is TRUE.
 #' @examples
 #' sp <- spc.example_spectra()
 #' BL = spc.makeSpcList(sp,"CAST")
@@ -199,7 +199,7 @@ setMethod("spc.plot.overlay", "SpcList", function (object, lab_cex=1,leg_idx=TRU
 #' Plotting \code{SpcList} object 
 #'
 #' @description
-#' Generating plot of the contents of a \code{SpcList} object overlay with respect to depth
+#' Generate plot of the contents of a \code{SpcList} object overlay by depth
 #'
 #' @usage 
 #' spc.plot.depth.overlay(object, X, lab_cex, ...)
@@ -376,7 +376,7 @@ setMethod("names", "SpcList", function(x){
 #' Extract or replace parts of a \code{SpcList} object
 #'
 #' @description
-#' Operators acting on  \code{Spectra} objects  to extract or replace parts
+#' Operators acting on  \code{SpcList} objects  to extract or replace parts.
 #' 
 #' @param x A \code{Spectra} object from which to extract element(s) or in which to replace element(s)
 #' @param name A character (column name) 
@@ -441,7 +441,7 @@ setMethod("show", "SpcList", function(object){
 #########################################################################
 #' Constructor function for the \code{SpcList} class.
 #' @description With this function, it is easy to create a \code{SpcList} object
-#' given an list containing multipls \code{Spectra} objects.
+#' given a list containing multiple \code{Spectra} objects.
 #' @usage 
 #' SpcList(x)
 #' @param x a list object
@@ -459,7 +459,6 @@ SpcList = function (x){
 #########################################################################
 # Method : spc.invalid.detect
 #########################################################################
-#' Determine invalid records inside a \code{SpcList} object
 #' @rdname spc.invalid.detect
 #' @export
 setMethod("spc.invalid.detect", signature = "list", def=function(source1){
@@ -496,7 +495,7 @@ setMethod("spc.getheader", signature = "list", def = function (object,name){
 #########################################################################
 #' Set a field of the @header slot of a \code{SpcList} object
 #' @description
-#' Function sets or changes the value of a field in the header slot of \code{SpcList} object.
+#' Set or change the value of a field in the header slot of \code{SpcList} object.
 #'
 #' @param value Object of class SpcList.
 #' @param object A \code{SpcList} object.
@@ -549,7 +548,7 @@ setMethod(f="spc.updateheader", signature="list", definition=function(object,Nam
 #########################################################################
 #' Populate fields of header slot using data from data slot 
 #' @description
-#' Populates a field of @header with a column data from @data slot.
+#' Populates a field of @header with column data from @data slot.
 #'
 #' @param dataname A character object specifying the name of @data column to be used
 #' @param object \code{SpcList} object 
@@ -594,9 +593,9 @@ setMethod("spc.data2header", signature = "list",
 #' @param x A \code{SpcList} object
 #' @param which.col A character, defining the name of the column to be used in the sorting
 #' @param decreasing Logical. If TRUE, then the rows are sorted in decreasing order. Passed on to the
-#' sort.idx() function from the base package. Default is FALSE.
+#' sort.idx() function from the base package. Default value is FALSE.
 #' @param na.last for controlling the treatment of NAs. Passed on to the
-#' sort.idx() function from the base package. Default is NA.
+#' sort.idx() function from the base package. Default value is NA.
 #' @param ...	arguments to be passed to or from methods. See help of \code{\link{sort}}.
 #' @examples
 #' sp <- spc.example_spectra()
