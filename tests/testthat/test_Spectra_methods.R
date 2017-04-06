@@ -2,7 +2,7 @@ library(geoSpectral)
 library(testthat)
 context("Tests for Spectra methods")
 
-fnm = file.path(base::system.file(package = "geoSpectral"),"test_data","particulate_absorption.csv.gz")
+fnm = file.path(base::system.file(package = "geoSpectral"),"inst","test_data","particulate_absorption.csv.gz")
 fnm=gsub("\\\\", "/", fnm)
 abs = read.table(fnm,sep=",",header=TRUE)
 abs$STATION=factor(abs$STATION)

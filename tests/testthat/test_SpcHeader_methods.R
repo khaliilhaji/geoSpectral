@@ -1,6 +1,6 @@
 library(geoSpectral)
 library(testthat)
-
+context("Tests for SpcHeader Methods")
 sptest = spc.example_spectra()
 sptest@header = SpcHeaderAdd(sptest@header, sptest@ShortName, 10)
 test_that("SpcHeaderAdd adds headers correctly", {

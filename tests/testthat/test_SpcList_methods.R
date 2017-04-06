@@ -1,5 +1,6 @@
 library(geoSpectral)
 library(testthat)
+context("Tests for SpcList Methods")
 sptest = spc.example_spectra()
 test_that("SpcLists are created properly", {
   expect_equal(SpcList(list(sptest,sptest^2)), as(list(sptest,sptest^2), "SpcList"))
